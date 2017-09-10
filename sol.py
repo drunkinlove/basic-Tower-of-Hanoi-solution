@@ -68,3 +68,4 @@ MoveTower(quantity, A, C, B)
 #Then we print the conclusion. The number of moves required is always the 
 #Mersenne number corresponding to the number of disks.
 print("\nThe number of moves required is " + str(moves))
+input("\nPress Enter to close the program.")
