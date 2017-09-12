@@ -13,7 +13,7 @@ C=[]
 
 
 
-def MoveDisk(disk, source, dest):
+def moveDisk(disk, source, dest):
 	"""
 	Moves a disk from the source peg to the destination peg.
 	This is the only legal move in this game (provided that we do not put
@@ -27,7 +27,7 @@ def MoveDisk(disk, source, dest):
 	source.remove(disk)
 	dest.insert(0, disk)
 
-def MoveTower(disk, source, dest, spare):
+def moveTower(disk, source, dest, spare):
 	"""
 	Moves a tower of disks from the source peg to the destination peg,
 	using the spare peg in the process.
@@ -44,15 +44,15 @@ def MoveTower(disk, source, dest, spare):
 	the same pattern.
 	"""
 	if disk == 1:
-		MoveDisk(disk, source, dest)
-		PrintLayout(A, B, C)
+		moveDisk(disk, source, dest)
+		printLayout(A, B, C)
 	else:
-		MoveTower(disk-1, source, spare, dest)
-		MoveDisk(disk, source, dest)
-		PrintLayout(A, B, C)
-		MoveTower(disk-1, spare, dest, source)
+		moveTower(disk-1, source, spare, dest)
+		moveDisk(disk, source, dest)
+		printLayout(A, B, C)
+		moveTower(disk-1, spare, dest, source)
 
-def PrintLayout(peg1, peg2, peg3):
+def printLayout(peg1, peg2, peg3):
 	"""
 	Outputs the current state of the three pegs.
 	"""
@@ -60,11 +60,10 @@ def PrintLayout(peg1, peg2, peg3):
 	print("Step " + str(moves) + ".\n        A: " + str(peg1) +
 		"\n        " + "B: " + str(peg2) + "\n        " + "C: " + str(peg3))
 
-
 #We should set the move counter to zero.
 moves=0
 #Now, we start the actual solving process:
-MoveTower(quantity, A, C, B)
+moveTower(quantity, A, C, B)
 #Then we print the conclusion. The number of moves required is always the 
 #Mersenne number corresponding to the number of disks.
 print("\nThe number of moves required is " + str(moves))
