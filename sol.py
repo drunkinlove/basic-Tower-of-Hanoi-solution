@@ -9,7 +9,7 @@ for i in range(quantity):
 	A.append(i+1)
 B=[]
 C=[]
-#Now, let"s start solving the problem. 
+#Now, let's start solving the problem. 
 
 
 
@@ -61,7 +61,7 @@ def PrintLayout(peg1, peg2, peg3):
 		"\n        " + "B: " + str(peg2) + "\n        " + "C: " + str(peg3))
 
 
-#We must set the move counter to zero.
+#We should set the move counter to zero.
 moves=0
 #Now, we start the actual solving process:
 MoveTower(quantity, A, C, B)
