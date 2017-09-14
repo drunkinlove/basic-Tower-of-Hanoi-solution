@@ -1,15 +1,15 @@
 quantity = int(input("Enter the number of disks, and the program will return " 
 	"the number of moves needed to solve the problem (move all disks from"
 	" tower A to tower C).\n"))
-#Preparation: let's imagine three pegs, and make for each one a 
-#corresponding vector. The leftmost peg has the specified number of disks on
-#it, numbered from the smallest, topmost to the largest, bottom-most one.
+# Preparation: let's imagine three pegs, and make for each one a 
+# corresponding vector. The leftmost peg has the specified number of disks on
+# it, numbered from the smallest, topmost to the largest, bottom-most one.
 A=[]
 for i in range(quantity):
 	A.append(i+1)
 B=[]
 C=[]
-#Now, let's start solving the problem. 
+# Now, let's start solving the problem. 
 
 
 
@@ -60,11 +60,11 @@ def printLayout(peg1, peg2, peg3):
 	print("Step " + str(moves) + ".\n        A: " + str(peg1) +
 		"\n        " + "B: " + str(peg2) + "\n        " + "C: " + str(peg3))
 
-#We should set the move counter to zero.
+# We should set the move counter to zero.
 moves=0
-#Now, we start the actual solving process:
+# Now, we start the actual solving process:
 moveTower(quantity, A, C, B)
-#Then we print the conclusion. The number of moves required is always the 
-#Mersenne number corresponding to the number of disks.
+# Then we print the conclusion. The number of moves required is always the 
+# Mersenne number corresponding to the number of disks.
 print("\nThe number of moves required is " + str(moves))
 input("\nPress Enter to close the program.")
