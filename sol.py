@@ -60,6 +60,7 @@ def printLayout(peg1, peg2, peg3):
 	print("Step " + str(moves) + ".\n        A: " + str(peg1) +
 		"\n        " + "B: " + str(peg2) + "\n        " + "C: " + str(peg3))
 
+	
 # We should set the move counter to zero.
 moves=0
 # Now, we start the actual solving process:
