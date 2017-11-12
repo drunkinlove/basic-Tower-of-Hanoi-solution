@@ -1,6 +1,6 @@
 quantity = int(input("Enter the number of disks, and the program will return " 
 	"the number of moves needed to solve the problem (move all disks from"
-	" tower A to tower C).\n"))
+	" tower A to tower C)."))
 # Preparation: let's imagine three pegs, and make for each one a 
 # corresponding vector. The leftmost peg has the specified number of disks on
 # it, numbered from the smallest, topmost to the largest, bottom-most one.
@@ -67,5 +67,5 @@ moves=0
 moveTower(quantity, A, C, B)
 # Then we print the conclusion. The number of moves required is always the 
 # Mersenne number corresponding to the number of disks.
-print("\nThe number of moves required is " + str(moves))
-input("\nPress Enter to close the program.")
+print("The number of moves required is " + str(moves))
+input("Press Enter to close the program.")
